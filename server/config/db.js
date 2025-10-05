@@ -3,8 +3,9 @@ import mongoose from "mongoose";
 
 const connectDB = async() => {
     try {
-        await mongoose.connect(process.env.MONGODB_URI,{
-        dbName: "ChatBot",
+        await mongoose.connect(process.env.MONGODB_URI, {
+          dbName: "ChatBot",
+          
         });
         console.log("DB is connected")   
     } catch (error) {
