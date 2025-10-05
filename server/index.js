@@ -21,7 +21,7 @@ app.get('/', (req,res) => res.send('Server is Live!'));
 app.use("/api/user",userRoutes);
 app.use("/api/chat",chatRoutes);
 
-
+console.log("Mongo URI on deployed server:", process.env.MONGODB_URI);
 app.listen(process.env.PORT, () => {
     console.log(`Server is runing on PORT ${process.env.PORT}`);
     connectDB();

@@ -1,8 +1,10 @@
 import sendMail from "../middlewares/sendMail.js"
 import {User} from "../models/User.js"
 import jwt from "jsonwebtoken"
+import connectDB from "../config/db.js";
 
 export const loginUser = async(req,res) => {
+    await connectDB();
     try {
         const {email} = req.body
 
